@@ -1,8 +1,8 @@
 from os import listdir
 from os.path import isfile, join
 
-gopro_dir = '/home/w1r0x/Desktop/gopro_2021-09-20'
-ffmpeg_resize = 'ffmpeg -i {0} -vf "hflip,vflip,scale=1920:1080" -metadata:s:v rotate=0 -codec:v libx265 -codec:a copy rotated/{0}'
+gopro_dir = '/home/w1r0x/Desktop/gopro_2021-09-19/'
+ffmpeg_resize = 'ffmpeg -i {0} -vf "transpose=2,transpose=0,hflip" -metadata:s:v rotate=0 -codec:v libx265 -codec:a copy rotated/{0}'
 
 
 def split_videos(video_list):
